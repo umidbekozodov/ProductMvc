@@ -1,0 +1,22 @@
+﻿@model GetProductVM
+
+<div style="text-align:center;">
+
+    <h6>Title : @Model.Title</h6>
+    <h6>Quantly : @Model.Quantly</h6>
+    <h6>Price : @Model.Price</h6>
+    <h6>TotalPriceWithVat : @Model.TotalPriceWithVat</h6>
+
+   <br />
+   <br />
+
+    <a asp-controller="Products" asp-action="UpdateProduct" asp-route-productId="@Model.Id" class="btn btn-warning"> Update </a>
+    <a asp-controller="Products" asp-action="DeleteProduct" asp-route-productId="@Model.Id" class="btn btn-danger"> Delete </a>
+
+</div>
+
+
+<br />
+<br />
+<br />
+<a asp-controller="Products" asp-action="GetProducts" class="btn btn-info"> Go to Products </a>
